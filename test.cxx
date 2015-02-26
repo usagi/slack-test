@@ -3,5 +3,5 @@
 auto main()
   -> int
 {
-  std::wcout << L"ハロー、プルリクエスト！";
+  std::cout << "hello, pull-requst";
 }
