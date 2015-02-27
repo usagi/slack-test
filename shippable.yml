@@ -1,5 +1,5 @@
 language: python
-build_image: shippableiamges/ubuntu1404_python
+build_image: shippableimages/ubuntu1404_python
 notifications:
     email: false
 before_install:
