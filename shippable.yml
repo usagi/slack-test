@@ -5,7 +5,8 @@ os:
 notifications:
     email: false
 before_install:
-    - sudo apt-get install clang-3.5 libc++-dev
+    - sudo apt-get update
+    - sudo apt-get install clang-3.5 libc++-dev -y
 script:
     - clang++-3.5 --version;
       clang++-3.5 -std=c++14 -stdlib=libc++ test.cxx -o test;
