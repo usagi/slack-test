@@ -1,9 +1,7 @@
 build_environment: Ubuntu 14.04
 language: python # a lie because shippable "doesn't support" cpp
-env:
-  global:
-    - SLACK_ORG=godai PROJECT=slack-test
-    - secure: 
+os:
+    - linux
 notifications:
     email: false
 before_install:
@@ -12,7 +10,3 @@ script:
     - clang++-3.5 --version;
       clang++-3.5 -std=c++14 -stdlib=libc++ test.cxx -o test;
       ./test
-after_failure:
-    - python slack_notifier.py --project $PROJECT --org $SLACK_ORG --token $SLACK_TOKEN
-after_success:
-    - python slack_notifier.py --project $PROJECT --org $SLACK_ORG --token $SLACK_TOKEN -s
