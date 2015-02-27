@@ -1,7 +1,4 @@
-build_environment: Ubuntu 14.04
-language: python # a lie because shippable "doesn't support" cpp
-os:
-    - linux
+build_image: shippableiamges/ubuntu1404_python
 notifications:
     email: false
 before_install:
