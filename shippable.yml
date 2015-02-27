@@ -1,5 +1,5 @@
+language: python
 build_image: shippableiamges/ubuntu1404_python
-language: python # a lie because shippable "doesn't support" cpp
 notifications:
     email: false
 before_install:
